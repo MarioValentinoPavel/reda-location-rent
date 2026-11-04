@@ -1,0 +1,36 @@
+/* Página legal de Reda Location / Rent (mismo mundo que la web: negro de la tarjeta, dorado, Boska + Satoshi) */
+:root { --ground: #0d0c0b; --ground-2: #141311; --ground-3: #1c1a17; --ink: #efe8da; --ink-2: #c9c1b2; --ink-3: #988f81; --foil: #d8b24a; --on-foil: #15110a; --f-d: 'Boska', serif; --f-b: 'Satoshi', system-ui, sans-serif; color-scheme: dark; }
+* { box-sizing: border-box; }
+html { background: var(--ground); }
+body.legal-page { margin: 0; background: var(--ground); color: var(--ink); font: 400 17px/1.65 var(--f-b); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--foil); color: var(--on-foil); }
+:focus-visible { outline: 2px solid var(--foil); outline-offset: 3px; }
+[hidden] { display: none !important; }
+a { color: inherit; text-underline-offset: 4px; text-decoration-color: var(--foil); }
+.legal-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px clamp(16px, 4.2vw, 64px); background: var(--ground-2); }
+.legal-brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; font: 500 13px/1 var(--f-b); letter-spacing: .22em; text-transform: uppercase; }
+.legal-jr { width: 40px; aspect-ratio: 604.5 / 457.5; background: var(--foil); -webkit-mask: url(../assets/brand/jr.svg) center / contain no-repeat; mask: url(../assets/brand/jr.svg) center / contain no-repeat; }
+.sl { color: var(--foil); }
+.legal-right { display: flex; align-items: center; gap: 12px; }
+.langs { display: flex; }
+.langs button { min-width: 40px; min-height: 44px; border: 0; background: none; color: var(--ink-3); font: 500 13px/1 var(--f-b); cursor: pointer; }
+.langs button[aria-pressed="true"] { color: var(--foil); }
+.legal-back { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; background: var(--ground-3); text-decoration: none; font-size: 14px; font-weight: 500; }
+.legal { max-width: 780px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) 16px 80px; }
+.legal h1 { margin: 0 0 8px; font: 300 clamp(40px, 7vw, 68px)/1.04 var(--f-d); letter-spacing: -0.02em; }
+.legal h2 { margin: 48px 0 12px; font: 400 26px/1.2 var(--f-d); }
+.legal .upd { margin: 0 0 28px; color: var(--ink-3); font-size: 14px; }
+.legal p { color: var(--ink-2); }
+.legal dl { display: grid; grid-template-columns: minmax(140px, 34%) 1fr; gap: 10px 20px; margin: 16px 0; padding: 22px; background: var(--ground-2); }
+.legal dt { color: var(--ink-3); }
+.legal dd { margin: 0; }
+.legal mark { background: #ffe36e; color: #1a1a1a; padding: 0 4px; }
+.legal table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 12px 10px; border-bottom: 1px solid var(--ground-3); }
+.legal th { color: var(--ink-3); font-weight: 500; }
+.credits { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 15px; color: var(--ink-2); }
+.credits span { color: var(--ink); }
+.credits a { overflow-wrap: anywhere; }
+.legal-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding: 28px clamp(16px, 4.2vw, 64px); background: var(--ground-2); color: var(--ink-3); font-size: 14px; }
+.legal-links { display: flex; gap: 20px; }
+@media (max-width: 560px) { .legal dl { grid-template-columns: 1fr; gap: 2px; } .legal dd { margin-bottom: 10px; } .legal-brand span:last-child { display: none; } }
